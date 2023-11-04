@@ -13,13 +13,12 @@ const ItemListContainer = ({greeting}) => {
 
         asyncFunc(categoryId)
             .then(response => {
-                getProducts(response)
+                setProducts(response)
             })
             .catch(error => {
                 console.error(error)
             })
-    }, [categoryId]
-    )
+    }, [categoryId])
 
     return(
         <div>
